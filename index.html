@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact</title>
+    <style>
+        body {
+            font-family: Arial,sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        fieldset {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            width: 30%;
+            font-weight: bold;
+            margin-right: 10px;
+            text-align: left;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+    
+       
+        }
+
+        .mandatory {
+            font-size: 12px;
+            text-align: center;
+            color: #555;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contactez-nous</h1>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Vos coordonnées</legend>
+
+            <div class="form-group">
+                <label for="nom">Nom : *</label>
+                <input type="text" id="nom" name="nom" placeholder="Nom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="prenom">Prénom : *</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telephone">Téléphone : *</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="Votre téléphone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email : *</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="objet">Objet : *</label>
+                <input type="text" id="objet" name="objet" placeholder="Objet" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Votre message</legend>
+
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" placeholder="Votre message ici..." required></textarea>
+            </div>
+        </fieldset>
+
+        <div class="button-group">
+            <button type="reset">Effacer</button>
+            <button type="submit">Envoyer</button>
+        </div>
+
+        <p class="mandatory">* Tous les champs sont obligatoires</p>
+    </form>
+
+</body>
+</html>
